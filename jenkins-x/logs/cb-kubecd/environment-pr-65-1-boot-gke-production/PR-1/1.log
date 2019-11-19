@@ -1,0 +1,36 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-65-1-b-zhwsq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-cpvlj[0m
+{"level":"warn","ts":1574163593.770045,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574163593.7708066,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-65-1-b-zhwsq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-pdzmw[0m
+{"level":"warn","ts":1574163595.0911505,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1574163595.0929172,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mcb-kubecd-environment-pr-65-1-b-zhwsq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-65-1-b-zhwsq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-environment-pr-65-1-b-vr7fj[0m
+{"level":"warn","ts":1574163599.147111,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1574163600.1647766,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-65-1-boot-gke-production.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-65-1-b-zhwsq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:1d900fd5a1e81a7dbe62a60740f5cf7a1c82c0db,1:9bbfe977b6ae1ff1d7cc0f75d4303a6ec8b36a87
+DEBUG: ran git fetch --unshallow origin 9bbfe977b6ae1ff1d7cc0f75d4303a6ec8b36a87: 1d900fd5a1e81a7dbe62a60740f5cf7a1c82c0db: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 1d900fd5a1e81a7dbe62a60740f5cf7a1c82c0db in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 9bbfe977b6ae1ff1d7cc0f75d4303a6ec8b36a87 in 
+Merged SHA 9bbfe977b6ae1ff1d7cc0f75d4303a6ec8b36a87 with commit message 'chore: Promote bdd-spring-1574162745 to version 0.0.1' into base branch master
+
+Showing logs for build [32mcb-kubecd-environment-pr-65-1-b-zhwsq-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
